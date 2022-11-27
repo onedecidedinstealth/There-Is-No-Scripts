@@ -25,6 +25,7 @@ function SkinChanger:RevertViewmodels()
    for i,v in pairs(Viewmodels:GetChildren()) do
       if v:GetAttribute("ViewmodelChanged") then
          v.Name = tostring(v:GetAttribute("ViewmodelChanged"))
+         v:SetAttribute("ViewmodelChanged", nil)
       end
    end
 end
